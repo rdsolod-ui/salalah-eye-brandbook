@@ -106,6 +106,11 @@
 
   .gradient-text{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
   .gradient-gold{background:var(--grad-gold);-webkit-background-clip:text;background-clip:text;color:transparent}
+  /* Arabic display: extra line-height so tall letters / diacritics never clip */
+  .font-arcalli{line-height:1.5;padding-block:.06em}
+  .font-arstrict{line-height:1.4;padding-block:.04em}
+  .font-armod{line-height:1.35}
+  .font-ar{line-height:1.7}
 
   .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);font-weight:700}
   .eyebrow::before{content:"";width:30px;height:2px;border-radius:2px;background:var(--gold);opacity:.7}
@@ -460,7 +465,7 @@
     <!-- LATIN / EN -->
     <h3 class="reveal font-display text-xl font-semibold mb-5 flex items-center gap-3"><span class="w-7 h-7 neo-inset grid place-items-center text-gold"><svg class="ico-sm" viewBox="0 0 24 24"><path d="M4 7V5h16v2M9 19h6M12 5v14"/></svg></span><span data-i18n="typo.latin.h"></span></h3>
     <div class="grid md:grid-cols-2 gap-7 mb-6">
-      <div class="neo p-8 reveal">
+      <div class="neo p-8 reveal" dir="ltr">
         <div class="text-[11px] tracking-[.2em] uppercase text-gold font-bold mb-4" data-i18n="typo.latin.disp"></div>
         <div class="font-display text-6xl font-bold leading-none mb-2">Aa Gg 09</div>
         <div class="font-display text-2xl">Space Grotesk · 400 / 500 / 700</div>
@@ -469,7 +474,7 @@
           <div class="text-xl txt-dim" data-i18n="typo.latin.disp.ex"></div>
         </div>
       </div>
-      <div class="neo p-8 reveal">
+      <div class="neo p-8 reveal" dir="ltr">
         <div class="text-[11px] tracking-[.2em] uppercase text-gold font-bold mb-4" data-i18n="typo.latin.text"></div>
         <div class="text-6xl font-black leading-none mb-2">Aa Gg 09</div>
         <div class="text-2xl">Inter · 300 → 900</div>
@@ -520,7 +525,7 @@
         <div class="font-arcalli text-2xl text-right">Aref Ruqaa</div>
         <div class="mt-5 grid gap-2 text-right">
           <div class="font-arcalli text-4xl">البحر و الغروب</div>
-          <div class="font-ar text-base txt-dim" data-i18n="typo.ar.calli.note"></div>
+          <div class="font-ar text-base txt-dim" dir="auto" data-i18n="typo.ar.calli.note"></div>
         </div>
       </div>
     </div>
